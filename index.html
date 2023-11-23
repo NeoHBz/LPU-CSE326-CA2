@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Customer Feedback and Survey</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: #e5dcca;
+                font-family: "Roboto", sans-serif;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .navbar {
+                background-color: #34403e;
+                color: #e5dcca;
+                height: 60px;
+                margin-top: -15px;
+                padding-bottom: 15px;
+            }
+
+            .container {
+                flex: 1;
+            }
+
+            .card {
+                margin: 20px auto 0;
+                max-width: 600px;
+                padding: 20px;
+                border: 2px solid #4a5452;
+                border-radius: 8px;
+                background-color: #fff;
+            }
+
+            .card h2 {
+                text-align: center;
+                color: #34403e;
+            }
+
+            .card .column {
+                width: 48%;
+                float: left;
+                margin-right: 2%;
+            }
+
+            .card::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .input-box,
+            .textarea {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid #4a5452;
+                border-radius: 4px;
+                background-color: #f8f8f8;
+                font-size: 16px;
+                color: #333;
+                transition: border-color 0.3s;
+            }
+
+            .input-box:focus,
+            .textarea:focus {
+                border-color: #008080;
+                outline: none;
+            }
+
+            .textarea {
+                height: 100px;
+                resize: vertical;
+            }
+
+            .textarea:hover {
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            }
+
+            button {
+                display: inline-block;
+                padding: 12px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                color: #34403e;
+                background-color: #e5dcca;
+                border: 2px solid #4a5452;
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #4a5452;
+                color: #e5dcca;
+                border-color: #34403e;
+            }
+
+            .rating {
+                display: flex;
+            }
+
+            .rating input {
+                display: none;
+            }
+
+            .rating label {
+                font-size: 24px;
+                margin: 0 5px;
+                cursor: pointer;
+                filter: grayscale(0%);
+            }
+
+            .rating input:checked ~ label,
+            .rating input:checked ~ label ~ label {
+                color: gold;
+                filter: grayscale(100%);
+            }
+
+            .footer {
+                background-color: #34403e;
+                color: #e5dcca;
+                padding: 15px;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                bottom: 0;
+            }
+
+            .footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            .footer-left,
+            .footer-right {
+                flex: 1;
+            }
+
+            .footer-center {
+                flex: 2;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="flex">
+                <h1 class="logo">Customer Feedback and Survey</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2>Feedback</h2>
+
+                <div class="column">
+                    <label for="firstName">First Name</label>
+                    <input
+                        class="input-box"
+                        placeholder="John"
+                        name="firstName"
+                    />
+                    <label for="email">Email</label>
+                    <input
+                        class="input-box"
+                        placeholder="johndoe@icloud.com"
+                        name="email"
+                    />
+                </div>
+
+                <div class="column">
+                    <label for="lastName">Last Name</label>
+                    <input
+                        class="input-box"
+                        placeholder="Doe"
+                        name="lastName"
+                    />
+                    <label for="mobile">Mobile</label>
+                    <input
+                        class="input-box"
+                        placeholder="9876543210"
+                        name="mobile"
+                        maxlength="10"
+                        minlength="10"
+                    />
+                </div>
+                <label for="feedback">Feedback</label>
+                <textarea
+                    name="feedback"
+                    placeholder="Enter your feedback here"
+                    class="textarea"
+                ></textarea>
+                <label for="upload">Upload Image</label>
+                <input type="file" name="upload" class="input-box" />
+                <div>
+                    <h3>How was your experience?</h3>
+                    <div class="column">
+                        <label for="websiteRating">Website</label>
+                        <div class="rating" id="websiteRating">
+                            <input
+                                type="radio"
+                                id="webStar1"
+                                name="webRating"
+                                value="1"
+                            />
+                            <label for="webStar1">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="webStar2"
+                                name="webRating"
+                                value="2"
+                            />
+                            <label for="webStar2">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="webStar3"
+                                name="webRating"
+                                value="3"
+                            />
+                            <label for="webStar3">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="webStar4"
+                                name="webRating"
+                                value="4"
+                            />
+                            <label for="webStar4">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="webStar5"
+                                name="webRating"
+                                value="5"
+                            />
+                            <label for="webStar5">⭐️</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label for="productRating">Product</label>
+                        <div class="rating" id="productRating">
+                            <input
+                                type="radio"
+                                id="productStar1"
+                                name="productRating"
+                                value="1"
+                            />
+                            <label for="productStar1">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="productStar2"
+                                name="productRating"
+                                value="2"
+                            />
+                            <label for="productStar2">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="productStar3"
+                                name="productRating"
+                                value="3"
+                            />
+                            <label for="productStar3">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="productStar4"
+                                name="productRating"
+                                value="4"
+                            />
+                            <label for="productStar4">⭐️</label>
+
+                            <input
+                                type="radio"
+                                id="productStar5"
+                                name="productRating"
+                                value="5"
+                            />
+                            <label for="productStar5">⭐️</label>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="center" style="margin-top: 50px">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <p>Made By Saurav Lal, Rajeshwari Thapa, Utkarsh Kumar</p>
+            </div>
+            <div class="footer-center">
+                <p>CSE326 Project</p>
+            </div>
+            <div class="footer-right">
+                <p>
+                    Made with ❤️ in LPU
+                    <img
+                        style="width: 20px; height: 20px"
+                        src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png"
+                    />
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
