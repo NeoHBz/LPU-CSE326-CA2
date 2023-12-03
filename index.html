@@ -12,106 +12,210 @@
             </div>
         </div>
         <div class="container">
-            <div class="card">
-                <h2>Feedback</h2>
+            <form onsubmit="return false">
+                <div class="card">
+                    <h2>Feedback Form</h2>
+                    <p>
+                        We would love to hear your thoughts, concerns or
+                        problems with anything so we can improve!
+                    </p>
+                    <div class="center">
+                        <img src="feedback.svg" height="200px" />
+                    </div>
+                    <br />
 
-                <div class="column">
-                    <label for="firstName">First Name</label>
-                    <input
-                        class="input-box"
-                        placeholder="Saurav"
-                        name="firstName"
-                    />
-                    <label for="email">Email</label>
-                    <input
-                        class="input-box"
-                        placeholder="saurav@icloud.com"
-                        name="email"
-                    />
-                </div>
+                    <div class="column">
+                        <label for="firstName">First Name</label>
+                        <input
+                            required
+                            class="input-box"
+                            placeholder="Saurav"
+                            name="firstName"
+                        />
+                        <label for="email">Email</label>
+                        <input
+                            required
+                            type="email"
+                            class="input-box"
+                            placeholder="saurav@icloud.com"
+                            name="email"
+                        />
+                    </div>
 
-                <div class="column">
-                    <label for="lastName">Last Name</label>
+                    <div class="column">
+                        <label for="lastName">Last Name</label>
+                        <input
+                            required
+                            class="input-box"
+                            placeholder="Lal"
+                            name="lastName"
+                        />
+                        <label for="mobile">Mobile</label>
+                        <input
+                            required
+                            class="input-box"
+                            placeholder="9876543210"
+                            name="mobile"
+                            maxlength="10"
+                            minlength="10"
+                        />
+                    </div>
+                    <div class="column">
+                        <label for="category">Category</label>
+                        <select required name="category" class="input-box">
+                            <option value="">Select Category</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="sub-category">Sub-Category</label>
+                        <select required name="sub-category" class="input-box">
+                            <option value="">Select Category First</option>
+                        </select>
+                    </div>
+                    <label for="feedback">Feedback</label>
+                    <textarea
+                        required
+                        name="feedback"
+                        placeholder="Enter your feedback here"
+                        class="textarea"
+                    ></textarea>
+                    <label for="upload">Upload Image</label>
                     <input
+                        required
+                        type="file"
+                        name="upload"
                         class="input-box"
-                        placeholder="Lal"
-                        name="lastName"
                     />
-                    <label for="mobile">Mobile</label>
-                    <input
-                        class="input-box"
-                        placeholder="9876543210"
-                        name="mobile"
-                        maxlength="10"
-                        minlength="10"
-                    />
-                </div>
-                <div class="column">
-                    <label for="category">Category</label>
-                    <select name="category" class="input-box">
-                        <option value="">Select Category</option>
-                    </select>
-                </div>
-                <div class="column">
-                    <label for="sub-category">Sub-Category</label>
-                    <select name="sub-category" class="input-box">
-                        <option value="">Select Category First</option>
-                    </select>
-                </div>
-                <label for="feedback">Feedback</label>
-                <textarea
-                    name="feedback"
-                    placeholder="Enter your feedback here"
-                    class="textarea"
-                ></textarea>
-                <label for="upload">Upload Image</label>
-                <input type="file" name="upload" class="input-box" />
-                <div>
                     <h3>How was your experience?</h3>
-                    <div class="column">
-                        <label for="websiteRating">Website</label>
-                        <div class="rating" id="websiteRating">
-                            <input type="radio" id="webStar1" value="1" />
-                            <label for="webStar1">⭐️</label>
+                    <div class="row">
+                        <div class="column">
+                            <label for="websiteRating">Website</label>
+                            <div class="rating" id="websiteRating">
+                                <input
+                                    required
+                                    type="radio"
+                                    id="webStar1"
+                                    value="1"
+                                />
+                                <label for="webStar1">⭐️</label>
 
-                            <input type="radio" id="webStar2" value="2" />
-                            <label for="webStar2">⭐️</label>
+                                <input
+                                    required
+                                    type="radio"
+                                    id="webStar2"
+                                    value="2"
+                                />
+                                <label for="webStar2">⭐️</label>
 
-                            <input type="radio" id="webStar3" value="3" />
-                            <label for="webStar3">⭐️</label>
+                                <input
+                                    required
+                                    type="radio"
+                                    id="webStar3"
+                                    value="3"
+                                />
+                                <label for="webStar3">⭐️</label>
 
-                            <input type="radio" id="webStar4" value="4" />
-                            <label for="webStar4">⭐️</label>
+                                <input
+                                    required
+                                    type="radio"
+                                    id="webStar4"
+                                    value="4"
+                                />
+                                <label for="webStar4">⭐️</label>
 
-                            <input type="radio" id="webStar5" value="5" />
-                            <label for="webStar5">⭐️</label>
+                                <input
+                                    required
+                                    type="radio"
+                                    id="webStar5"
+                                    value="5"
+                                />
+                                <label for="webStar5">⭐️</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label for="productRating">Product</label>
+                            <div class="rating" id="productRating">
+                                <input
+                                    required
+                                    type="radio"
+                                    id="productStar1"
+                                    value="1"
+                                />
+                                <label for="productStar1">⭐️</label>
+
+                                <input
+                                    required
+                                    type="radio"
+                                    id="productStar2"
+                                    value="2"
+                                />
+                                <label for="productStar2">⭐️</label>
+
+                                <input
+                                    required
+                                    type="radio"
+                                    id="productStar3"
+                                    value="3"
+                                />
+                                <label for="productStar3">⭐️</label>
+
+                                <input
+                                    required
+                                    type="radio"
+                                    id="productStar4"
+                                    value="4"
+                                />
+                                <label for="productStar4">⭐️</label>
+
+                                <input
+                                    required
+                                    type="radio"
+                                    id="productStar5"
+                                    value="5"
+                                />
+                                <label for="productStar5">⭐️</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label for="recommend">Would you recommend us?</label>
+                            <div id="recommend">
+                                <input
+                                    required
+                                    type="radio"
+                                    id="recommendYes"
+                                    value="Yes"
+                                    name="recommend"
+                                />
+                                <label for="recommendYes">Yes</label>
+
+                                <input
+                                    required
+                                    type="radio"
+                                    id="recommendNo"
+                                    value="No"
+                                    name="recommend"
+                                />
+                                <label for="recommendNo">No</label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label for="hear">How did you hear about us?</label>
+                            <select required name="hear" class="input-box">
+                                <option value="">Select</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Social Media">
+                                    Social Media
+                                </option>
+                                <option value="Newspaper">Newspaper</option>
+                                <option value="Others">Others</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="column">
-                        <label for="productRating">Product</label>
-                        <div class="rating" id="productRating">
-                            <input type="radio" id="productStar1" value="1" />
-                            <label for="productStar1">⭐️</label>
-
-                            <input type="radio" id="productStar2" value="2" />
-                            <label for="productStar2">⭐️</label>
-
-                            <input type="radio" id="productStar3" value="3" />
-                            <label for="productStar3">⭐️</label>
-
-                            <input type="radio" id="productStar4" value="4" />
-                            <label for="productStar4">⭐️</label>
-
-                            <input type="radio" id="productStar5" value="5" />
-                            <label for="productStar5">⭐️</label>
-                        </div>
+                    <div class="center">
+                        <button>Submit</button>
                     </div>
                 </div>
-                <br />
-                <div class="center" style="margin-top: 50px">
-                    <button>Next</button>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="footer">
             <div class="footer-left">
@@ -170,94 +274,132 @@
         }
 
         const categories = [
-            { id: 1, name: "Shoes", subCategories: [
-                "Running Shoes",
-                "Casual Shoes",
-                "Sports Shoes",
-                "Formal Shoes",
-                "Sandals & Floaters",
-                "Flip Flops",
-            ] },
-            { id: 2, name: "Clothes", subCategories: [
-                "T-Shirts",
-                "Casual Shirts",
-                "Formal Shirts",
-                "Sweatshirts",
-                "Sweaters",
-            ] },
-            { id: 3, name: "Accessories", subCategories: [
-                "Watches",
-                "Sunglasses",
-                "Bags",
-                "Wallets",
-                "Belts",
-            ] },
-            { id: 4, name: "Electronics", subCategories: [
-                "Mobiles",
-                "Laptops",
-                "Tablets",
-                "Headphones",
-                "Speakers",
-            ] },
-            { id: 5, name: "Home Appliances", subCategories: [
-                "Televisions",
-                "Refrigerators",
-                "Washing Machines",
-                "Air Conditioners",
-                "Microwave Ovens",
-            ] },
-            { id: 6, name: "Furniture", subCategories: [
-                "Sofas",
-                "Beds",
-                "Dining Tables",
-                "TV Units",
-                "Wardrobes",
-            ] },
-            { id: 7, name: "Books", subCategories: [
-                "Academic",
-                "Literature",
-                "Fiction",
-                "Non-Fiction",
-            ] },
-            { id: 8, name: "Stationary", subCategories: [
-                "Pens",
-                "Diaries",
-                "Calculators",
-                "Files",
-                "Folders",
-            ] },
-            { id: 9, name: "Grocery", subCategories: [
-                "Pulses",
-                "Rice",
-                "Atta",
-                "Oil",
-                "Spices",
-            ] },
-            { id: 10, name: "Others", subCategories: [
-                "Others"
-            ] },
-        ]
-        const categorySelect = document.querySelector('select[name="category"]');
-        const subCategorySelect = document.querySelector('select[name="sub-category"]');
-        categories.forEach(category => {
-            const option = document.createElement('option');
+            {
+                id: 1,
+                name: "Shoes",
+                subCategories: [
+                    "Running Shoes",
+                    "Casual Shoes",
+                    "Sports Shoes",
+                    "Formal Shoes",
+                    "Sandals & Floaters",
+                    "Flip Flops",
+                ],
+            },
+            {
+                id: 2,
+                name: "Clothes",
+                subCategories: [
+                    "T-Shirts",
+                    "Casual Shirts",
+                    "Formal Shirts",
+                    "Sweatshirts",
+                    "Sweaters",
+                ],
+            },
+            {
+                id: 3,
+                name: "Accessories",
+                subCategories: [
+                    "Watches",
+                    "Sunglasses",
+                    "Bags",
+                    "Wallets",
+                    "Belts",
+                ],
+            },
+            {
+                id: 4,
+                name: "Electronics",
+                subCategories: [
+                    "Mobiles",
+                    "Laptops",
+                    "Tablets",
+                    "Headphones",
+                    "Speakers",
+                ],
+            },
+            {
+                id: 5,
+                name: "Home Appliances",
+                subCategories: [
+                    "Televisions",
+                    "Refrigerators",
+                    "Washing Machines",
+                    "Air Conditioners",
+                    "Microwave Ovens",
+                ],
+            },
+            {
+                id: 6,
+                name: "Furniture",
+                subCategories: [
+                    "Sofas",
+                    "Beds",
+                    "Dining Tables",
+                    "TV Units",
+                    "Wardrobes",
+                ],
+            },
+            {
+                id: 7,
+                name: "Books",
+                subCategories: [
+                    "Academic",
+                    "Literature",
+                    "Fiction",
+                    "Non-Fiction",
+                ],
+            },
+            {
+                id: 8,
+                name: "Stationary",
+                subCategories: [
+                    "Pens",
+                    "Diaries",
+                    "Calculators",
+                    "Files",
+                    "Folders",
+                ],
+            },
+            {
+                id: 9,
+                name: "Grocery",
+                subCategories: ["Pulses", "Rice", "Atta", "Oil", "Spices"],
+            },
+            { id: 10, name: "Others", subCategories: ["Others"] },
+        ];
+        const categorySelect = document.querySelector(
+            'select[name="category"]',
+        );
+        const subCategorySelect = document.querySelector(
+            'select[name="sub-category"]',
+        );
+        categories.forEach((category) => {
+            const option = document.createElement("option");
             option.value = category.id;
             option.innerText = category.name;
             categorySelect.appendChild(option);
         });
-        categorySelect.addEventListener('change', function(e) {
-            const selectedCategory = categories.find(category => category.id == e.target.value);
-            subCategorySelect.innerHTML = '';
-            [
-                "Select Sub-Category",
-                ...selectedCategory.subCategories,
-            ].forEach(subCategory => {
-                const option = document.createElement('option');
-                option.value = subCategory;
-                option.innerText = subCategory;
-                subCategorySelect.appendChild(option);
-            });
+        categorySelect.addEventListener("change", function (e) {
+            const selectedCategory = categories.find(
+                (category) => category.id == e.target.value,
+            );
+            subCategorySelect.innerHTML = "";
+            ["Select Sub-Category", ...selectedCategory.subCategories].forEach(
+                (subCategory) => {
+                    const option = document.createElement("option");
+                    option.value = subCategory;
+                    option.innerText = subCategory;
+                    subCategorySelect.appendChild(option);
+                },
+            );
         });
 
+        const requiredFields = document.querySelectorAll("[required]");
+        requiredFields.forEach((field) => {
+            const label = document.querySelector(`[for="${field.name}"]`);
+            label.innerHTML = `${label.innerHTML} <span style="color: red">*</span>`;
+        });
     </script>
 </html>
