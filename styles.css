@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #e5dcca;
+    background-color: #f9f7f7;
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
     display: flex;
@@ -19,8 +19,8 @@ body {
 }
 
 .navbar {
-    background-color: #34403e;
-    color: #e5dcca;
+    background-color: #112d4e;
+    color: #dbe2ef;
     height: 60px;
     margin-top: -15px;
     padding-bottom: 15px;
@@ -48,12 +48,6 @@ body {
     width: 48%;
     float: left;
     margin-right: 2%;
-}
-
-.card::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .input-box,
@@ -94,19 +88,20 @@ button {
     border-radius: 4px;
     cursor: pointer;
     color: #34403e;
-    background-color: #e5dcca;
-    border: 2px solid #4a5452;
+    background-color: #dbe2ef;
+    border: 2px solid #3f72af;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 button:hover {
-    background-color: #4a5452;
+    background-color: #3f72af;
     color: #e5dcca;
     border-color: #34403e;
 }
 
 .rating {
     display: flex;
+    select: none;
 }
 
 .rating input {
@@ -117,18 +112,11 @@ button:hover {
     font-size: 24px;
     margin: 0 5px;
     cursor: pointer;
-    filter: grayscale(0%);
-}
-
-.rating input:checked ~ label,
-.rating input:checked ~ label ~ label {
-    color: gold;
-    filter: grayscale(100%);
 }
 
 .footer {
-    background-color: #34403e;
-    color: #e5dcca;
+    background-color: #112d4e;
+    color: #dbe2ef;
     padding: 15px;
     text-align: center;
     display: flex;
