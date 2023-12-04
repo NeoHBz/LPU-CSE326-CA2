@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="container">
-            <form onsubmit="return false">
+            <form onsubmit="formOnSubmit(event)">
                 <div class="card">
                     <h2>Feedback Form</h2>
                     <p>
@@ -236,6 +236,21 @@
         </div>
     </body>
     <script>
+        function formOnSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log(data);
+            alert("Form Submitted Successfully");
+            form.reset();
+            setRating(1, websiteRating);
+            setRating(1, productRating);
+        }
+
         let websiteRating = document.getElementById("websiteRating");
         let productRating = document.getElementById("productRating");
         websiteRating.addEventListener("click", function (e) {
@@ -253,7 +268,6 @@
             }
             let stars = parent.getElementsByTagName("input");
             for (let i = 0; i < stars.length; i++) {
-                console.log(rating, i, stars[i].id);
                 if (i < rating) {
                     stars[i].checked = true;
                     updateLabelStyle(stars[i].id, true);
